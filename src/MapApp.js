@@ -5,9 +5,12 @@ import lookup from "country-code-lookup";
 import "./mapApp.scss";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Covid19Navbar from "./components/covid19Navbar";
+const key = require("./keys");
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoicmFhanZpcGF0ZWw5OSIsImEiOiJja2U3YXQ5cmYxYmUyMnpsNmt3bGpnNno5In0.RvOQay4XMLuvZpEvTm65iA";
+/*mapboxgl.accessToken =
+  "pk.eyJ1IjoicmFhanZpcGF0ZWw5OSIsImEiOiJja2U3YXQ5cmYxYmUyMnpsNmt3bGpnNno5In0.RvOQay4XMLuvZpEvTm65iA";*/
+
+mapboxgl.accessToken = key.MAPBOX;
 
 function MapApp() {
   const mapboxElRef = useRef(null); // DOM element to render map
